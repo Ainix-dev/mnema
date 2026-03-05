@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "mnema"
+version = "2.0.0"
+description = "MNEMA Architecture — Cognitive AI with relational memory, goal-driven retrieval, and behavioral state evolution for frozen language models"
+authors = [{ name = "Ainix-dev" }]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+readme = "README.md"
+keywords = [
+    "mnema", "memory", "continual-learning", "lora", "llm",
+    "cognitive-architecture", "episodic-memory", "adaptive-state",
+    "hebbian", "lfm2", "frozen-model"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "peft>=0.10",
+    "bitsandbytes>=0.43",
+    "sentence-transformers>=2.2",
+    "chromadb>=0.4",
+    "apscheduler>=3.10",
+    "numpy>=1.24",
+    "safetensors>=0.4",
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/Ainix-dev/mnema"
+Repository = "https://github.com/Ainix-dev/mnema"
+"Bug Tracker" = "https://github.com/Ainix-dev/mnema/issues"
+"Research Paper" = "https://github.com/Ainix-dev/Project-MNEMA/blob/main/MNEMA-v2-research.pdf"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mnema*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
