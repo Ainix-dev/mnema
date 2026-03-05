@@ -37,7 +37,7 @@ response, monologue = brain.chat("Tell me something", think=True)
 brain.close()
 ```
 
-Memory persists automatically at `~/.mnema/ken/` across sessions.
+Memory persists automatically at `~/.mnema/user/` across sessions.
 
 ---
 
