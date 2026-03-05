@@ -23,7 +23,7 @@ model, tokenizer = load_model("LiquidAI/LFM2.5-1.2B-Instruct")
 brain = MNEMA(model=model, tokenizer=tokenizer, profile="ken")
 
 # Chat
-response = brain.chat("Hi, my name is Ken")
+response = brain.chat("Hi, my name is {Your name}")
 print(response)
 
 # Stream
